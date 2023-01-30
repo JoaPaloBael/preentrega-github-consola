@@ -1,0 +1,108 @@
+/*
+Paleta de colores
+verde-claro: #A9E5BB;
+color: #FCF6B1;
+naranja: #F7B32B;
+color: #F72C25;
+Violeta: #2D1E2F; */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.header-flex{
+    background-color:  #A9E5BB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img{
+    width: 200px;
+}
+
+.header-flex ul{
+    display: flex;
+    list-style: none;
+    /* width: 100vw;
+    justify-content: space-around; */
+
+}
+.header-flex li{
+    /*1 rem = 16px*/
+    margin: 0.5rem;
+}
+
+.header-flex a{
+    color: #2D1E2F;
+    text-decoration: none;
+}
+
+/*CONTENIDO PRINCIPAL*/
+.banner-hero{
+    background-image: url('https://www.jll.es/images/global/treant-and-insights/jll-tetris-lenovo-teaser.jpg');
+    height: 50vh;
+    background-size: cover;
+}
+
+.banner-hero h1{
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 30%;
+}
+
+/*PRODUCTO*/
+
+.producto{
+    width: 50vw;
+    text-align: center;
+    /* margin: .5rem; */
+}
+
+.producto img{
+    width: 40vw;
+}
+
+/*GRILLA DE PRODUCTOS*/
+.productos-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/*FOOTER*/
+.footer p{
+    text-align: center;
+    background-color: #F7B32B;
+    color: white;
+    padding: 1rem;
+}
+
+
+@media (min-width: 768px){
+    /*BARRA DE NAVEGACION*/
+    .header-flex{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    /*CONTENIDO PRINCIPAL*/
+    .banner-hero{
+        background-position: center;
+    }
+    /*GRILLA DE PRODUCTOS*/
+    .productos-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .producto{
+        width: 24vw;
+    }
+    .producto img{
+        width: 20vw;
+    }
+}
